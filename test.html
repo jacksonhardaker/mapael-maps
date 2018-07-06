@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mapael Japan</title>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.1.0/js/jquery.mapael.min.js'></script>
+    <script src='thailand/thailand.js'></script>
+
+    <style>
+        body {
+            color: #5d5d5d;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Example with plotted cities</h1>
+
+        <div class="mapcontainer">
+            <div class="map">
+                <span>Alternative content for the map</span>
+            </div>
+        </div>
+
+        <p>
+            <b>All example for jQuery Mapael are available
+                <a href="https://www.vincentbroute.fr/mapael/">here</a>.</b>
+        </p>
+
+    </div>
+
+    <script>
+        (function () {
+            $(".mapcontainer").mapael({
+                map: {
+                    // Set the name of the map to display
+                    name: "thailand",
+                    defaultPlot: {
+                        size: 4
+                    }
+                },
+                plots: {
+                    bangkok: {
+                        latitude: 13.7563,
+                        longitude: 100.5018,
+                        text: { content: 'Bangkok' }
+                    },
+                    krabi: {
+                        latitude: 8.0863,
+                        longitude: 98.9063,
+                        text: { content: 'Krabi' }
+                    },
+                    phuket: {
+                        latitude: 7.9519,
+                        longitude: 98.3381,
+                        text: { content: 'Phuket' }
+                    },
+                    chiangmai: {
+                        latitude: 18.7061,
+                        longitude: 98.9817,
+                        text: { content: 'Chiang Mai' }
+                    },
+                    khonkaen: {
+                        latitude: 16.4322,
+                        longitude: 102.8236,
+                        text: {content: 'Khon Kaen'}
+                    }
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
